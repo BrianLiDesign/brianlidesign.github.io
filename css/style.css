@@ -108,7 +108,7 @@ nav ul li a:hover {
   bottom: 40px;
   right: 40px;
   z-index: 1200;
-  background: #f84fea;
+  background: #191717;
   color: #fff;
   border-radius: 50%;
   width: 48px;
@@ -124,7 +124,7 @@ nav ul li a:hover {
 }
 
 .back-to-top:hover {
-  background: #b10a8a;
+  background: #151515;
   opacity: 1;
   transform: translateY(-4px) scale(1.08);
 }
@@ -154,6 +154,15 @@ nav ul li a:hover {
   align-items: right;
   display: flex;
   gap: 20px;
+}
+
+.footer-right a i {
+  color: #666;
+  transition: color 0.2s;
+}
+
+.footer-right a:hover i {
+  color: #0078d7;
 }
 
 .footer-text {
