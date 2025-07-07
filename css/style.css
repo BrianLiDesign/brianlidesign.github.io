@@ -159,7 +159,7 @@ nav ul li a:hover {
   bottom: 40px;
   box-shadow: 0 2px 8px rgba(0, 0, 0, 0.15);
   color: #fff;
-  display: flex;
+  display: none;
   font-size: 24px;
   height: 48px;
   justify-content: center;
