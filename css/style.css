@@ -2,6 +2,7 @@
   --background-color: #f0f0f0;
   --link-color: #0078d7;
   --text-color: #333;
+  --text-footer-color: #666;
 
   --max-width: 1400px;
   --side-padding: 50px;
@@ -10,7 +11,9 @@
 @font-face {
   font-family: "Proxima Nova";
   src: url("../fonts/proxima-nova-regular.ttf") format("truetype");
+}
 
+@font-face {
   font-family: "JetBrains Mono";
   src: url("../fonts/JetBrainsMono-Regular.ttf") format("truetype");
 }
@@ -28,8 +31,11 @@ html {
 body {
   background-color: var(--background-color);
   color: var(--text-color);
+  display: flex;
+  flex-direction: column;
   font-family: "Proxima Nova", sans-serif;
   margin: 0;
+  min-height: 100vh;
   padding-top: 0px;
 }
 
@@ -40,6 +46,10 @@ body {
   max-width: var(--max-width);
   padding-left: var(--side-padding);
   padding-right: var(--side-padding);
+}
+
+main {
+  flex-grow: 1;
 }
 
 nav {
@@ -180,20 +190,23 @@ nav ul li a:hover {
 }
 
 .footer {
-  align-content: end;
-  bottom: 0;
+  align-content: center;
+  border-top: 1px solid #e5e7eb;
+  box-sizing: border-box;
+  display: flex;
   font-family: "JetBrains Mono", monospace;
+  justify-content: space-between;
   left: 0;
-  padding-top: 40px;
-  text-align: left;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: auto;
+  max-width: var(--max-width);
+  padding-bottom: 10px;
+  padding-left: var(--side-padding);
+  padding-right: var(--side-padding);
+  padding-top: 10px;
   width: 100%;
   z-index: 100;
-}
-
-.footer-container {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
 }
 
 .footer-left {
@@ -207,7 +220,7 @@ nav ul li a:hover {
 }
 
 .footer-right a i {
-  color: #666;
+  color: var(--text-footer-color);
   transition: color 0.2s;
 }
 
@@ -216,7 +229,7 @@ nav ul li a:hover {
 }
 
 .footer-text {
-  color: #666;
+  color: var(--text-footer-color);
   padding: 10px 0;
   text-decoration: none;
   text-size-adjust: 32px;
