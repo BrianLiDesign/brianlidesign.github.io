@@ -201,10 +201,10 @@ nav ul li a:hover {
   margin-right: auto;
   margin-top: auto;
   max-width: var(--max-width);
-  padding-bottom: 10px;
+  padding-bottom: 20px;
   padding-left: var(--side-padding);
   padding-right: var(--side-padding);
-  padding-top: 10px;
+  padding-top: 20px;
   width: 100%;
   z-index: 100;
 }
