@@ -1,11 +1,11 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="utf-8"/>
-    <title>Brian Li Portfolio</title>
-</head>
-<body>
-<h1>GitHub Pages Website Test</h1>
-<p>Hello, world</p>
-</body>
-</html>
+<h1 align="center">Brian Li Website & Portfolio</h1>
+
+---
+
+## Web Analytics
+
+## Features
+
+## File Structure
+
+## About Me
