@@ -238,3 +238,104 @@ nav ul li a:hover {
 .footer-text:hover {
   color: var(--link-color);
 }
+
+.button-container {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 50px;
+  margin-top: 30px;
+}
+
+.button {
+  align-items: center;
+  background-color: var(--link-color);
+  border: none;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  color: #fff;
+  display: inline-flex;
+  font-size: 1rem;
+  font-weight: 600;
+  justify-content: center;
+  padding: 12px 25px;
+  text-decoration: none;
+  transition: background-color 0.3s ease, transform 0.2s ease,
+    box-shadow 0.2s ease;
+}
+
+.button:hover {
+  background-color: #005fa3;
+  transform: translateY(-2px);
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
+}
+
+.icon-list {
+  align-items: stretch;
+  display: grid;
+  gap: 24px;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  justify-items: center;
+  justify-content: center;
+  list-style: none;
+  margin: 24px auto 32px auto;
+  padding: 0;
+  max-width: 1200px;
+}
+
+.icon-list li {
+  align-items: center;
+  background: #fff;
+  border-radius: 12px;
+  box-shadow: 0 2px 12px rgba(0, 0, 0, 0.07);
+  color: var(--text-color);
+  display: flex;
+  flex-direction: column;
+  font-size: 1.1rem;
+  gap: 24px;
+  height: 150px;
+  justify-content: center;
+  min-height: 120px;
+  min-width: 120px;
+  padding: 28px 12px 18px 12px;
+  text-align: center;
+  transition: box-shadow 0.2s, transform 0.2s;
+  width: 220px;
+}
+
+.icon-list i {
+  font-size: 2.2em;
+  color: var(--link-color);
+  margin-bottom: 12px;
+  min-width: 32px;
+  text-align: center;
+  transition: color 0.2s;
+}
+
+.icon-list li:hover {
+  box-shadow: 0 6px 24px rgba(0, 0, 0, 0.13);
+  transform: translateY(-6px) scale(1.04);
+}
+
+.icon-list li:hover i {
+  color: #005fa3;
+}
+
+/* Responsive: stack cards on smaller screens */
+@media (max-width: 1100px) {
+  .icon-list {
+    grid-template-columns: repeat(3, 1fr);
+    gap: 24px;
+  }
+}
+@media (max-width: 700px) {
+  .icon-list {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 18px;
+  }
+}
+@media (max-width: 480px) {
+  .icon-list {
+    grid-template-columns: 1fr;
+    gap: 14px;
+  }
+}
