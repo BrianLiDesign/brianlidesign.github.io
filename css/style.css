@@ -201,31 +201,12 @@ nav ul li a:hover {
   margin-right: auto;
   margin-top: auto;
   max-width: var(--max-width);
-  padding-bottom: 20px;
+  padding-bottom: 10px;
   padding-left: var(--side-padding);
   padding-right: var(--side-padding);
-  padding-top: 20px;
+  padding-top: 10px;
   width: 100%;
   z-index: 100;
-}
-
-.footer-left {
-  display: flex;
-  gap: 20px;
-}
-
-.footer-right {
-  display: flex;
-  gap: 20px;
-}
-
-.footer-right a i {
-  color: var(--text-footer-color);
-  transition: color 0.2s;
-}
-
-.footer-right a:hover i {
-  color: var(--link-color);
 }
 
 .footer-text {
@@ -237,6 +218,30 @@ nav ul li a:hover {
 
 .footer-text:hover {
   color: var(--link-color);
+}
+
+.footer-left {
+  align-items: center;
+  display: flex;
+  gap: 20px;
+}
+
+.footer-right {
+  align-items: center;
+  display: flex;
+  gap: 20px;
+}
+
+.footer-right .social-icon {
+  width: 20px;
+  height: 20px;
+  filter: grayscale(100%) brightness(150%);
+  transition: filter 0.2s;
+}
+
+.footer-right a:hover .social-icon {
+  filter: invert(30%) sepia(80%) saturate(1000%) hue-rotate(190deg)
+    brightness(95%);
 }
 
 .button-container {
@@ -302,13 +307,16 @@ nav ul li a:hover {
   width: 220px;
 }
 
-.icon-list i {
-  font-size: 2.2em;
-  color: var(--link-color);
-  margin-bottom: 12px;
-  min-width: 32px;
-  text-align: center;
-  transition: color 0.2s;
+.icon-list .card-icon {
+  height: 2.2em;
+  width: 2.2em;
+  filter: sepia(100%) hue-rotate(180deg) saturate(200%) brightness(80%);
+  transition: filter 0.2s;
+}
+
+.icon-list li:hover .card-icon {
+  /* Changed from .icon-list li:hover i */
+  filter: sepia(100%) hue-rotate(200deg) saturate(300%) brightness(100%); /* Example for hover */
 }
 
 .icon-list li:hover {
