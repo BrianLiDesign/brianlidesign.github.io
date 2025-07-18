@@ -328,6 +328,13 @@ nav ul li a:hover {
   color: #005fa3;
 }
 
+.about-me-container {
+  font-size: 1.3rem;
+  max-width: var(--max-width);
+  margin: 0 auto;
+  padding: 0 var(--side-padding);
+}
+
 /* Responsive: stack cards on smaller screens */
 @media (max-width: 1100px) {
   .icon-list {
