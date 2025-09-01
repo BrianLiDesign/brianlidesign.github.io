@@ -1,10 +1,14 @@
 :root {
   --background-color: #f0f0f0;
+  --footer-color: #fff;
+  --header-color: #fff;
   --link-color: #0078d7;
   --text-color: #333;
   --text-footer-color: #666;
 
   --max-width: 1400px;
+
+  --article-padding: 250px;
   --side-padding: 50px;
 }
 
@@ -49,7 +53,13 @@ body {
 }
 
 main {
-  flex-grow: 1;
+  flex-grow: 1 0 auto;
+}
+
+.article {
+  padding-top: 20px;
+  padding-left: var(--article-padding);
+  padding-right: var(--article-padding);
 }
 
 nav {
@@ -119,9 +129,9 @@ nav ul li a:hover {
   color: var(--link-color);
 }
 
-#header {
+header {
   align-items: center;
-  background: var(--background-color);
+  background: var(--header-color);
   box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
   height: 60px;
   left: 0;
@@ -133,7 +143,7 @@ nav ul li a:hover {
   z-index: 1000;
 }
 
-#header .container {
+header .container {
   align-items: center;
   box-sizing: border-box;
   display: flex;
@@ -189,29 +199,34 @@ nav ul li a:hover {
   transform: translateY(-4px) scale(1.08);
 }
 
-.footer {
-  align-content: center;
+footer {
+  align-items: center;
+  background: var(--footer-color);
   border-top: 1px solid #e5e7eb;
   box-sizing: border-box;
   display: flex;
   font-family: "JetBrains Mono", monospace;
+  margin: 0;
+  margin-top: auto;
+  padding: 20px 0;
+  width: 100vw;
+  z-index: 100;
+}
+
+footer .container {
+  align-items: center;
+  display: flex;
   justify-content: space-between;
-  left: 0;
   margin-left: auto;
   margin-right: auto;
-  margin-top: auto;
   max-width: var(--max-width);
-  padding-bottom: 10px;
   padding-left: var(--side-padding);
   padding-right: var(--side-padding);
-  padding-top: 10px;
   width: 100%;
-  z-index: 100;
 }
 
 .footer-text {
   color: var(--text-footer-color);
-  padding: 10px 0;
   text-decoration: none;
   text-size-adjust: 32px;
 }
@@ -220,12 +235,7 @@ nav ul li a:hover {
   color: var(--link-color);
 }
 
-.footer-left {
-  align-items: center;
-  display: flex;
-  gap: 20px;
-}
-
+.footer-left,
 .footer-right {
   align-items: center;
   display: flex;
@@ -328,7 +338,7 @@ nav ul li a:hover {
   color: #005fa3;
 }
 
-.about-me-container {
+.about-container {
   font-size: 1.3rem;
   max-width: var(--max-width);
   margin: 0 auto;
