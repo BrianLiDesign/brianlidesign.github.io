@@ -1,11 +1,8 @@
-.container {
-  padding: 1rem;
-}
-
 .slider-wrapper {
   position: relative;
   max-width: 48rem;
   margin: 0 auto;
+  padding-top: 20px;
 }
 
 .slider {
