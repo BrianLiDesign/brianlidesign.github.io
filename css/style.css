@@ -1,5 +1,5 @@
 :root {
-  --background-color: #f0f0f0;
+  --background-color: #f7f7f7;
   --footer-color: #fff;
   --header-color: #fff;
   --link-color: #0078d7;
@@ -14,12 +14,17 @@
 
 @font-face {
   font-family: "Proxima Nova";
-  src: url("../fonts/proxima-nova-regular.ttf") format("truetype");
+  src: url("../assets/fonts/proxima-nova-regular.ttf") format("truetype");
 }
 
 @font-face {
   font-family: "JetBrains Mono";
-  src: url("../fonts/JetBrainsMono-Regular.ttf") format("truetype");
+  src: url("../assets/fonts/JetBrainsMono-Regular.ttf") format("truetype");
+}
+
+@font-face {
+  font-family: "Lexend Deca";
+  src: url("../assets/fonts/lexend-deca-regular.ttf") format("truetype");
 }
 
 * {
@@ -91,15 +96,48 @@ nav {
 }
 
 .nav-title {
-  color: var(--text-color);
+  animation: button-animation 0.65s 0.15s ease-out forwards;
+  background-color: #6c36d8;
+  background-image: linear-gradient(45deg, #c32cf6 50%, #8f33fe 50%);
+  background-size: 270%;
+  background-repeat: repeat;
+  background-position: top right;
+  display: table;
+  font-family: "Lexend Deca", sans-serif;
   font-size: 28px;
   font-weight: 600;
   text-decoration: none;
-  transition: color 0.2s;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  -moz-background-clip: text;
+  -moz-text-fill-color: transparent;
+}
+
+.nav-title:hover,
+.nav-title:hover span {
+  animation: button-animation-rev 0.65s ease-out forwards;
 }
 
 .nav-title:hover {
-  color: var(--link-color);
+  animation: button-animation-rev 0.65s ease-out forwards;
+}
+
+@keyframes button-animation {
+  0% {
+    background-position: top right;
+  }
+  100% {
+    background-position: top left;
+  }
+}
+
+@keyframes button-animation-rev {
+  0% {
+    background-position: top left;
+  }
+  100% {
+    background-position: top right;
+  }
 }
 
 .logo {
