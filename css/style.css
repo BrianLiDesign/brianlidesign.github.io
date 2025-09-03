@@ -8,7 +8,7 @@
 
   --max-width: 1400px;
 
-  --article-padding: 250px;
+  --large-padding: 250px;
   --side-padding: 50px;
 }
 
@@ -57,24 +57,28 @@ body {
   padding-right: var(--side-padding);
 }
 
-main {
-  flex-grow: 1 0 auto;
+.container--large {
+  box-sizing: border-box;
+  margin-left: auto;
+  margin-right: auto;
+  max-width: var(--max-width);
+  padding-left: var(--large-padding);
+  padding-right: var(--large-padding);
+  padding-top: 20px;
 }
 
-.article {
-  padding-top: 20px;
-  padding-left: var(--article-padding);
-  padding-right: var(--article-padding);
+main {
+  flex-grow: 1 0 auto;
 }
 
 nav {
   align-items: center;
   display: flex;
   font-family: "Poppins", sans-serif;
-  justify-content: space-between;
-  width: 100%;
   height: 100%;
+  justify-content: space-between;
   line-height: 1;
+  width: 100%;
 }
 
 .nav-left {
@@ -196,12 +200,10 @@ header .container {
 
 .header-text {
   font-size: 30px;
-  margin-top: 5%;
+  padding-top: 4%;
   margin-left: auto;
   margin-right: auto;
   max-width: var(--max-width);
-  padding-left: var(--side-padding);
-  padding-right: var(--side-padding);
   text-align: left;
 }
 
@@ -247,7 +249,7 @@ footer {
   margin: 0;
   margin-top: auto;
   padding: 20px 0;
-  width: 100vw;
+  width: 100%;
   z-index: 100;
 }
 
@@ -380,22 +382,30 @@ footer .container {
   font-size: 1.3rem;
   max-width: var(--max-width);
   margin: 0 auto;
-  padding: 0 var(--side-padding);
 }
 
 /* Responsive: stack cards on smaller screens */
+@media (max-width: 900px) {
+  .container--large {
+    padding-left: 32px;
+    padding-right: 32px;
+  }
+}
+
 @media (max-width: 1100px) {
   .icon-list {
     grid-template-columns: repeat(3, 1fr);
     gap: 24px;
   }
 }
+
 @media (max-width: 700px) {
   .icon-list {
     grid-template-columns: repeat(2, 1fr);
     gap: 18px;
   }
 }
+
 @media (max-width: 480px) {
   .icon-list {
     grid-template-columns: 1fr;
