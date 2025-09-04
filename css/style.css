@@ -5,6 +5,7 @@
   --link-color: #0078d7;
   --text-color: #333;
   --text-footer-color: #666;
+  --text-secondary-color: #555;
 
   --max-width: 1400px;
 
@@ -108,7 +109,7 @@ nav {
   background-position: top right;
   display: table;
   font-family: "Lexend Deca", sans-serif;
-  font-size: 28px;
+  font-size: 2rem;
   font-weight: 600;
   text-decoration: none;
   -webkit-background-clip: text;
@@ -161,7 +162,7 @@ nav ul {
 nav ul li a {
   align-items: center;
   color: #333;
-  font-size: 18px;
+  font-size: 1.2rem;
   font-weight: 500;
   text-decoration: none;
   transition: color 0.2s;
@@ -199,7 +200,7 @@ header .container {
 }
 
 .header-text {
-  font-size: 30px;
+  font-size: 2.5rem;
   padding-top: 4%;
   margin-left: auto;
   margin-right: auto;
@@ -208,8 +209,14 @@ header .container {
 }
 
 .header-text h1 {
-  font-size: 50px;
+  font-size: 3.5rem;
   margin-top: 20px;
+}
+
+.secondary-text {
+  color: var(--text-secondary-color);
+  font-family: "JetBrains Mono", monospace;
+  font-size: 1.4rem;
 }
 
 .back-to-top {
