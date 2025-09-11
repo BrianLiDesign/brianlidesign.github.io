@@ -392,6 +392,89 @@ footer .container {
   margin: 0 auto;
 }
 
+/* Remove or replace the old .column styles */
+.project-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 2rem;
+  padding: 2rem 0;
+  width: 100%;
+}
+
+.project-tile {
+  aspect-ratio: 1/1;
+  border-radius: 12px;
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.1);
+  overflow: hidden;
+  position: relative;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.project-tile:hover {
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.15);
+  transform: translateY(-8px);
+}
+
+.project-tile a {
+  display: block;
+  height: 100%;
+  text-decoration: none;
+  width: 100%;
+}
+
+.project-tile-content {
+  display: flex;
+  background: linear-gradient(
+    to top,
+    rgba(0, 0, 0, 0.8) 0%,
+    rgba(0, 0, 0, 0.4) 50%,
+    rgba(0, 0, 0, 0) 100%
+  );
+  flex-direction: column;
+  inset: 0;
+  justify-content: flex-end;
+  padding: 1.5rem;
+  position: absolute;
+}
+
+.project-title {
+  color: white;
+  font-size: 1.5rem;
+  font-weight: 600;
+  margin: 0;
+}
+
+.project-description {
+  color: rgba(255, 255, 255, 0.9);
+  font-size: 1rem;
+  margin-top: 0.5rem;
+  opacity: 0;
+  transform: translateY(20px);
+  transition: opacity 0.3s ease, transform 0.3s ease;
+}
+
+.project-tile:hover .project-description {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.project-flip-that-digit {
+  background: url("../assets/images/icons/flip-that-digit.svg") center/cover
+    no-repeat;
+}
+
+.project wip {
+  background: yellow;
+}
+
+/* Add media queries for responsiveness */
+@media (max-width: 768px) {
+  .project-container {
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 1.5rem;
+  }
+}
+
 /* Responsive: stack cards on smaller screens */
 @media (max-width: 900px) {
   .container--large {
