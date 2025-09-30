@@ -219,6 +219,12 @@ header .container {
   font-size: 1.4rem;
 }
 
+.article-text {
+  font-family: "Proxima Nova", sans-serif;
+  font-size: 1.3rem;
+  line-height: 1.6;
+}
+
 .back-to-top {
   align-items: center;
   background: #191717;
@@ -461,6 +467,11 @@ footer .container {
 .project-flip-that-digit {
   background: url("../assets/images/icons/flip-that-digit.svg") center/cover
     no-repeat;
+}
+
+.project-techsavvyteens {
+  background: url("../assets/images/techsavvyteens-helping-people-2.jpg")
+    center/cover no-repeat;
 }
 
 .project wip {
