@@ -433,8 +433,8 @@ footer .container {
   background: linear-gradient(
     to top,
     rgba(0, 0, 0, 0.8) 0%,
-    rgba(0, 0, 0, 0.4) 50%,
-    rgba(0, 0, 0, 0) 100%
+    rgba(0, 0, 0, 0.4) 30%,
+    rgba(0, 0, 0, 0) 90%
   );
   flex-direction: column;
   inset: 0;
@@ -448,20 +448,14 @@ footer .container {
   font-size: 1.5rem;
   font-weight: 600;
   margin: 0;
+  margin-bottom: 8px;
 }
 
 .project-description {
-  color: rgba(255, 255, 255, 0.9);
+  color: rgba(255, 255, 255, 0.7);
+  font-family: "JetBrains Mono", monospace;
   font-size: 1rem;
   margin-top: 0.5rem;
-  opacity: 0;
-  transform: translateY(20px);
-  transition: opacity 0.3s ease, transform 0.3s ease;
-}
-
-.project-tile:hover .project-description {
-  opacity: 1;
-  transform: translateY(0);
 }
 
 .project-flip-that-digit {
