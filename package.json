@@ -1,0 +1,23 @@
+{
+  "name": "brianlidesign.github.io",
+  "version": "1.0.0",
+  "description": "1. [Project Description](#project-description)\r 2. [Getting Started](#getting-started)\r    - [Installation](#installation)\r 3. [File Structure](#file-structure)\r 4. [Contact](#contact)\r 5. [Acknowledgments](#acknowledgments)",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/BrianLiDesign/brianlidesign.github.io.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/BrianLiDesign/brianlidesign.github.io/issues"
+  },
+  "homepage": "https://github.com/BrianLiDesign/brianlidesign.github.io#readme",
+  "dependencies": {
+    "typescript": "^5.9.3"
+  }
+}
