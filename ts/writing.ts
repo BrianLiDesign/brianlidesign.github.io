@@ -4,38 +4,116 @@
  * This is a type alias, a way to give a new name to an existing type.
  * In this case, we're creating a new name for an object with specific properties.
  *
- * @property {string} firstname - The person's first name.
- * @property {string} lastname - The person's last name.
- * @property {string} birthday - The person's birthday in a string format like "MM-DD-YYYY".
+ * @property {string} title - Post title
+ * @property {string} date - Human readable date (e.g. "August 2025")
+ * @property {string} description - Short summary
+ * @property {string} image - Path to thumbnail image
+ * @property {string} imageAlt - Alt text for the thumbnail
+ * @property {string} slug - Url slug (used to build the post link)
  */
-type Person = {
-  firstname: string;
-  lastname: string;
-  birthday: string;
+/**
+ * Blog type and a small renderer that appends blog cards to #blog-container.
+ * Build/compile this file to js/blog.js (or your project's output folder) so writing.html can load it.
+ */
+
+export type Blog = {
+  title: string;
+  date: string;
+  description: string;
+  image: string;
+  imageAlt: string;
+  slug: string;
 };
 
-/**
- * Declares an array named `persons`.
- *
- * The `: Person[]` part is a type annotation. It tells TypeScript that this array can only
- * contain objects that have the structure defined by the `Person` type.
- * This is a key feature of TypeScript; it ensures that every element in the array has
- * `firstname`, `lastname`, and `birthday` properties, and that they are all strings.
- */
-const persons: Person[] = [
+const blogs: Blog[] = [
   {
-    // This is a valid object because it matches the `Person` type.
-    firstname: "Joe",
-    lastname: "Mama",
-    birthday: "06-19-2000",
+    title: "Flip That Digit — How I built a small game",
+    date: "August 2025",
+    description:
+      "A short post about the implementation details and lessons learned building Flip That Digit.",
+    image: "/assets/images/icons/flip-that-digit.svg",
+    imageAlt: "Flip That Digit thumbnail",
+    slug: "flip-that-digit",
   },
   {
-    // This is also a valid object.
-    firstname: "Nacho",
-    lastname: "Dada",
-    birthday: "06-20-2000",
+    title: "TechSavvyTeens — Teaching seniors technology",
+    date: "September 2024",
+    description:
+      "I taught and aided many senior citizens how to safely and effectively use technology and the internet through the non-profit TechSavvyTeens.",
+    image: "/assets/images/techsavvyteens-helping-people-2.jpg",
+    imageAlt: "TechSavvyTeens thumbnail",
+    slug: "techsavvyteens",
   },
-  // If you tried to add an object like `{ age: 30 }`, TypeScript would give you an error
-  // because it doesn't match the required `Person` type. This is static type checking
-  // in action, helping you catch mistakes early.
+  {
+    title: "Chrome Extension: In progress",
+    date: "October 2025",
+    description: "In progress",
+    image: "/assets/images/icons/html.svg",
+    imageAlt: "In progress thumbnail",
+    slug: "in-progress",
+  },
 ];
+
+/** Create a single blog card element from a Blog object */
+function createBlogCard(blog: Blog): HTMLElement {
+  const article = document.createElement("article");
+  article.className = "blog-card";
+
+  const link = document.createElement("a");
+  link.href = `/${blog.slug}.html`;
+  link.className = "blog-link";
+
+  const img = document.createElement("img");
+  img.src = blog.image;
+  img.alt = blog.imageAlt;
+  img.className = "blog-thumb";
+
+  const meta = document.createElement("div");
+  meta.className = "blog-meta";
+
+  const title = document.createElement("h2");
+  title.className = "blog-title";
+  title.textContent = blog.title;
+
+  const date = document.createElement("p");
+  date.className = "blog-date";
+  date.textContent = blog.date;
+
+  const desc = document.createElement("p");
+  desc.className = "blog-desc";
+  desc.textContent = blog.description;
+
+  meta.appendChild(title);
+  meta.appendChild(date);
+  meta.appendChild(desc);
+
+  link.appendChild(img);
+  link.appendChild(meta);
+  article.appendChild(link);
+
+  return article;
+}
+
+/** Render all blogs into container with id 'blog-container' */
+export function renderBlogs(containerId = "blog-container"): void {
+  const container = document.getElementById(containerId);
+  if (!container) return;
+
+  // clear existing
+  container.innerHTML = "";
+
+  blogs.forEach((b) => {
+    const node = createBlogCard(b);
+    container.appendChild(node);
+  });
+}
+
+// Auto-run when loaded in browser
+if (typeof window !== "undefined") {
+  document.addEventListener("DOMContentLoaded", () => {
+    renderBlogs();
+  });
+}
+
+// export data for later use
+export { blogs };

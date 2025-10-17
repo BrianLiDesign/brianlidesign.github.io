@@ -1,11 +1,11 @@
 {
   "compilerOptions": {
-    "module": "nodenext",
+    "module": "esnext",
     "target": "esnext",
     "types": [],
 
-    "rootDir": "./src",
-    "outDir": "./dist",
+    "rootDir": "./ts",
+    "outDir": "./js",
 
     "declaration": true,
     "declarationMap": true,
@@ -17,13 +17,13 @@
     "strict": true,
     "jsx": "react-jsx",
     "esModuleInterop": true,
-    "verbatimModuleSyntax": true,
+    "verbatimModuleSyntax": false,
     "isolatedModules": true,
     "noUncheckedSideEffectImports": true,
     "moduleDetection": "force",
     "skipLibCheck": true,
     "forceConsistentCasingInFileNames": true
   },
-  "include": ["src"],
+  "include": ["ts"],
   "exclude": ["node_modules"]
 }
