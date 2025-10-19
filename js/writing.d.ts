@@ -6,10 +6,11 @@
  *
  * @property {string} title - Post title
  * @property {string} date - Human readable date (e.g. "August 2025")
+ * @property {string[]} tags - Array of tags associated with the blog post
  * @property {string} description - Short summary
  * @property {string} image - Path to thumbnail image
  * @property {string} imageAlt - Alt text for the thumbnail
- * @property {string} slug - Url slug (used to build the post link)
+ * @property {string} slug - URL slug (used to build the post link)
  */
 /**
  * Blog type and a small renderer that appends blog cards to #blog-container.
@@ -18,6 +19,7 @@
 export type Blog = {
     title: string;
     date: string;
+    tags: string[];
     description: string;
     image: string;
     imageAlt: string;

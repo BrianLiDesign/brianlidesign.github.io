@@ -501,10 +501,10 @@ footer .container {
 }
 
 .blog-thumb {
-  width: 100%;
+  display: block;
   height: 180px;
   object-fit: cover;
-  display: block;
+  width: 100%;
 }
 
 .blog-meta {
@@ -512,8 +512,9 @@ footer .container {
 }
 
 .blog-title {
-  margin: 0 0 0.25rem 0;
+  font-family: ("Lexend Deca", monospace);
   font-size: 1.125rem;
+  margin: 0 0 0.25rem 0;
 }
 
 .blog-date {
@@ -521,6 +522,37 @@ footer .container {
   color: var(--text-secondary-color, #6b7280);
   font-family: "JetBrains Mono", monospace; /* date uses JetBrains Mono as requested */
   font-size: 0.9rem;
+}
+
+.blog-tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+  margin-bottom: 0.75rem;
+}
+
+.tag {
+  border-radius: 9999px;
+  color: var(--text-secondary-color);
+  font-family: "Lexend Deca", monospace;
+  font-size: 0.85rem;
+  padding: 0.25rem 0.75rem;
+}
+
+.tag[data-tag="Community"] {
+  background-color: #dd9787;
+}
+
+.tag[data-tag="Education"] {
+  background-color: #74d3ae;
+}
+
+.tag[data-tag="Hardware"] {
+  background-color: #f3d97e;
+}
+
+.tag[data-tag="Technology"] {
+  background-color: #e9ebf8;
 }
 
 .blog-desc {
