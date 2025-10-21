@@ -1,11 +1,11 @@
 :root {
   --background-color: #f7f7f7;
-  --footer-color: #fff;
-  --header-color: #fff;
+  --footer-color: #ffffff;
+  --header-color: #ffffff;
   --link-color: #0078d7;
-  --text-color: #333;
-  --text-footer-color: #666;
-  --text-secondary-color: #555;
+  --text-color: #333333;
+  --text-footer-color: #666666;
+  --text-secondary-color: #91a3b0;
 
   --max-width: 1400px;
 
@@ -482,21 +482,21 @@ footer .container {
 .blog-card {
   background: var(--card-bg, #fff);
   border-radius: 12px;
-  overflow: hidden;
   box-shadow: 0 6px 20px rgba(0, 0, 0, 0.06);
+  overflow: hidden;
   transition: transform 0.18s ease, box-shadow 0.18s ease;
 }
 
 .blog-card:hover {
-  transform: translateY(-6px);
   box-shadow: 0 12px 36px rgba(0, 0, 0, 0.08);
+  transform: translateY(-6px);
 }
 
 .blog-link {
+  color: inherit;
   display: flex;
   flex-direction: column;
   height: 100%;
-  color: inherit;
   text-decoration: none;
 }
 
@@ -518,10 +518,10 @@ footer .container {
 }
 
 .blog-date {
-  margin: 0 0 0.75rem 0;
   color: var(--text-secondary-color, #6b7280);
   font-family: "JetBrains Mono", monospace; /* date uses JetBrains Mono as requested */
   font-size: 0.9rem;
+  margin: 0 0 0.75rem 0;
 }
 
 .blog-tags {
@@ -533,7 +533,7 @@ footer .container {
 
 .tag {
   border-radius: 9999px;
-  color: var(--text-secondary-color);
+  color: var(--text-color);
   font-family: "Lexend Deca", monospace;
   font-size: 0.85rem;
   padding: 0.25rem 0.75rem;
@@ -556,15 +556,15 @@ footer .container {
 }
 
 .blog-desc {
+  color: var(--text-color);
   margin: 0;
-  color: #6b6f76; /* grey description */
 }
 
 /* Add media queries for responsiveness */
 @media (max-width: 768px) {
   .project-container {
-    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
     gap: 1.5rem;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
   }
 }
 
@@ -578,21 +578,21 @@ footer .container {
 
 @media (max-width: 1100px) {
   .icon-list {
-    grid-template-columns: repeat(3, 1fr);
     gap: 24px;
+    grid-template-columns: repeat(3, 1fr);
   }
 }
 
 @media (max-width: 700px) {
   .icon-list {
-    grid-template-columns: repeat(2, 1fr);
     gap: 18px;
+    grid-template-columns: repeat(2, 1fr);
   }
 }
 
 @media (max-width: 480px) {
   .icon-list {
-    grid-template-columns: 1fr;
     gap: 14px;
+    grid-template-columns: 1fr;
   }
 }
