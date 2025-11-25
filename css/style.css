@@ -172,6 +172,10 @@ nav ul li a:hover {
   color: var(--link-color);
 }
 
+nav ul li a.active {
+  text-decoration: underline;
+}
+
 header {
   align-items: center;
   background: var(--header-color);

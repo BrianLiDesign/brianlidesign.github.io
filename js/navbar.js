@@ -1,15 +1,20 @@
 class Navbar extends HTMLElement {
   connectedCallback() {
+    const isSubpage = this.getAttribute("data-subpage") === "true";
+    const prefix = isSubpage ? "../" : "";
+
     this.innerHTML = `
         <header id="header">
             <div class="container">
-                <div class="nav-left">
-                    <a href="index.html" class="nav-title">Brian Li</a>
-                </div>
                 <nav>
-                    <a href="pages/projects.html">Projects</a>
-                    <a href="pages/writing.html">Writing</a>
-                    <a href="pages/about.html">About</a>
+                    <div class="nav-left">
+                        <a href="${prefix}index.html" class="nav-title">Brian Li</a>
+                    </div>
+                    <ul>
+                        <li><a href="${prefix}pages/projects.html">Projects</a></li>
+                        <li><a href="${prefix}pages/writing.html">Writing</a></li>
+                        <li><a href="${prefix}pages/about.html">About</a></li>
+                    </ul>
                 </nav>
             </div>
         </header>
